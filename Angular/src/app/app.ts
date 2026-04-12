@@ -1,13 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component, Directive, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FirstComponent } from './components/first-component/first-component';
 import { Home } from './components/home/home';
 import { ParentData } from './components/parent-data/parent-data';
-import { email } from '@angular/forms/signals';
+import { Directives } from './components/directives/directives';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FirstComponent, Home, ParentData],
+  imports: [RouterOutlet, FirstComponent, Home, ParentData, Directives],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
