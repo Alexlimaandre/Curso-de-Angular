@@ -8,9 +8,11 @@
 h1{
     margin: auto;
     text-align: center;
-    margin-top: 20px;
+    background-color: black;
+    color: BLue;
+    font-size: 800;
+    padding: 20px;
 }
-
 p{
     margin: auto;
     text-align: center;

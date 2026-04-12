@@ -9,7 +9,12 @@ import { Component, Input } from '@angular/core';
 export class ParentData {
 
   @Input() name: string = '';// por padrão é necessário um valor, então é comum colocar "" e no component pai ele adiciona os dados
-  @Input() userData!: {email: string, role: string};// o ! inicializa o dado
+
+  @Input() idade: number = 0;// por padrão é necessário um valor, então é comum colocar 0 e no component pai ele adiciona os dados
+
+  @Input() userData!: {email: string, role: string};// o ! inicializa o dado, necessário(tem outras formas)
+
+  @Input() endereco!: {logradouro: string, numero: number, complemento: string};
 
 constructor () {
 }

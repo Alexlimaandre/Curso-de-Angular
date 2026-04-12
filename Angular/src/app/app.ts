@@ -18,6 +18,14 @@ export class App {
   userData = {
     email: 'andre@gmail.com',
     role: 'ADMIN'
-  }
+  };
+
+  idade : number = 30;
+
+  userEndereco = {
+    logradouro : "Rua São João, 102",
+    numero: 123,
+    complemento: "Ap 141",
+  };
 
 }
