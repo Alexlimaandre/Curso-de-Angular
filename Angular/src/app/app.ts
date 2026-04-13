@@ -4,10 +4,19 @@ import { FirstComponent } from './components/first-component/first-component';
 import { Home } from './components/home/home';
 import { ParentData } from './components/parent-data/parent-data';
 import { Directives } from './components/directives/directives';
+import { IfCondicionalCpt } from './components/if-condicional-cpt/if-condicional-cpt';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FirstComponent, Home, ParentData, Directives],
+  imports: 
+  [
+    RouterOutlet,
+    FirstComponent,
+    Home,
+    ParentData,
+    Directives,
+    IfCondicionalCpt,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
