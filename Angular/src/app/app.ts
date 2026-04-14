@@ -5,6 +5,7 @@ import { Home } from './components/home/home';
 import { ParentData } from './components/parent-data/parent-data';
 import { Directives } from './components/directives/directives';
 import { IfCondicionalCpt } from './components/if-condicional-cpt/if-condicional-cpt';
+import { Events } from './components/events/events';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { IfCondicionalCpt } from './components/if-condicional-cpt/if-condicional
     ParentData,
     Directives,
     IfCondicionalCpt,
+    Events,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
