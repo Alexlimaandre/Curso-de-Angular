@@ -3,12 +3,23 @@
 
     <h2>Animais:</h2>
     <ul>
-        @for (animal of animals){
+        @for (animal of animals; track animal.name){
             <li>{{animal.name}}</li>
         } 
         @empty{
             <li>Lista Vazia</li>
         }
+    <hr style="border: 1px solid; margin: 20px;">
+    <h2>Nomes</h2>
     </ul>
-
+        <ul>
+        @for (name of names; track name.id){
+            <li>{{name.name}}</li>
+        } 
+        @empty{
+            <li>Lista Vazia</li>
+        }
+    </ul>
+    <hr style="border: 1px solid; margin: 20px;">
+    <h2>Nomes</h2>
 </div>
