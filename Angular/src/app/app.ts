@@ -7,6 +7,7 @@ import { Directives } from './components/directives/directives';
 import { IfCondicionalCpt } from './components/if-condicional-cpt/if-condicional-cpt';
 import { Events } from './components/events/events';
 import { Emitter } from './components/emitter/emitter';
+import { ListRender } from './components/list-render/list-render';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { Emitter } from './components/emitter/emitter';
     Directives,
     IfCondicionalCpt,
     Events,
-    Emitter
+    Emitter,
+    ListRender,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

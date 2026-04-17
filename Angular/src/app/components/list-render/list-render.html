@@ -1,0 +1,14 @@
+<div>
+    <h1>Renderização de Listas</h1>
+
+    <h2>Animais:</h2>
+    <ul>
+        @for (animal of animals){
+            <li>{{animal.name}}</li>
+        } 
+        @empty{
+            <li>Lista Vazia</li>
+        }
+    </ul>
+
+</div>
