@@ -3,12 +3,17 @@
 
     <h2>Animais:</h2>
     <ul>
-        @for (animal of animals; track animal.name){
-            <li>{{animal.name}}</li>
+        @for (animal of animals; track animal.id){
+            <li>
+                {{animal.name}} - {{animal.type}} -
+                <button (click)="showAge(animal)">Show Age</button>
+            </li>
         } 
         @empty{
             <li>Lista Vazia</li>
         }
+        <h3>{{animalDetails}}</h3>
+       
     <hr style="border: 1px solid; margin: 20px;">
     <h2>Nomes</h2>
     </ul>
@@ -21,5 +26,8 @@
         }
     </ul>
     <hr style="border: 1px solid; margin: 20px;">
-    <h2>Nomes</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda deleniti iste accusamus itaque sequi officiis perferendis, alias magnam placeat nemo nulla quam nesciunt reiciendis pariatur porro deserunt, id dignissimos minus!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae exercitationem neque, officiis dolor minus facere non quisquam cum accusantium eius nostrum eveniet modi sequi, doloribus dignissimos vel dolore aperiam itaque!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat error repellendus soluta eos autem natus. Nihil rerum voluptatibus iste, sed, ex, possimus labore quas necessitatibus excepturi vero illum maiores beatae!
+    </p>
 </div>
