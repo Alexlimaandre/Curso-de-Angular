@@ -8,6 +8,7 @@ import { IfCondicionalCpt } from './components/if-condicional-cpt/if-condicional
 import { Events } from './components/events/events';
 import { Emitter } from './components/emitter/emitter';
 import { ListRender } from './components/list-render/list-render';
+import { Pipes } from './components/pipes/pipes';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { ListRender } from './components/list-render/list-render';
     Events,
     Emitter,
     ListRender,
+    Pipes,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
