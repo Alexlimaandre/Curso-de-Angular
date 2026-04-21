@@ -1,0 +1,23 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+label{
+    margin: 5px;
+}
+input{
+    margin: 5px;
+    padding: 5px 8px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 0.5px;
+}
+.inputs-twdb{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+

@@ -1,5 +1,6 @@
-import { Component, Directive, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 import { FirstComponent } from './components/first-component/first-component';
 import { Home } from './components/home/home';
 import { ParentData } from './components/parent-data/parent-data';
@@ -9,6 +10,7 @@ import { Events } from './components/events/events';
 import { Emitter } from './components/emitter/emitter';
 import { ListRender } from './components/list-render/list-render';
 import { Pipes } from './components/pipes/pipes';
+import { TwoWayDtBinding } from './components/two-way-dt-binding/two-way-dt-binding';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,7 @@ import { Pipes } from './components/pipes/pipes';
     Emitter,
     ListRender,
     Pipes,
+    TwoWayDtBinding,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
