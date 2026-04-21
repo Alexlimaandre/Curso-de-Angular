@@ -10,5 +10,6 @@ import { FormsModule } from '@angular/forms';
 export class TwoWayDtBinding {
 
   name = '';
-  idade = 0;
+  idade: number = 0;
+
 }

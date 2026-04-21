@@ -12,13 +12,13 @@
         @if(name){
             <section class="inputs-twdb">
                 <label>Idade:</label>
-                <input type="text" [(ngModel)]="idade" name="idade"placeholder="Didite sua Idade"/>
+                <input type="number" [(ngModel)]="idade" name="idade"placeholder="Didite sua Idade"/>
             </section>
         }
         
         <input type="submit" value="Enviar">
     </form>
-    @if(idade){
+    @if(name && idade){
         <p>Olá {{name}}, você tem {{idade}} anos!!</p>
     }
 </div>
