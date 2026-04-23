@@ -1,24 +1,33 @@
 import { Component } from '@angular/core';
 import { Animal } from '../../Animal';
+import { ListService } from '../../services/list-service';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-list-render',
-  imports: [],
+  imports: [TitleCasePipe],
   templateUrl: './list-render.html',
   styleUrl: './list-render.css',
 })
 export class ListRender {
 
+  constructor(private listService: ListService) {}
+
+  removeAnimal(animal : Animal){
+    console.log("Removendo Animal...");
+    this.animals = this.listService.remove(this.animals, animal);
+  }
+
   animalDetails = ''
 
   // Por padrão os dados vem de um banco, mas para a prática veremos esse dados mocado
   animals: Animal[] = [
-    {id: 1, name: "Bidu", type: "Dog", age: 5},
-    {id: 2, name: "Tom", type: "Cat", age: 7},
-    {id: 3, name: "Frida", type: "Fish"},
-    {id: 4, name: "Clóvis", type: "Bird", age: 12},
+    {id: 1, name: "bidu", type: "dog", age: 5},
+    {id: 2, name: "tom", type: "cat", age: 7},
+    {id: 3, name: "frida", type: "fish"},
+    {id: 4, name: "clóvis", type: "bird", age: 12},
     // for(){}, no angular mais atual pode gerar algumu problema, se não tiver um item para ele usar no track
-    {id: 5,name: "Clóvis", type: "Bird"}
+    {id: 5,name: "clóvis", type: "bird"}
   ]
 
   showAge(animal : Animal): void{

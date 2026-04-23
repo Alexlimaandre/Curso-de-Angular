@@ -5,8 +5,9 @@
     <ul>
         @for (animal of animals; track animal.id){
             <li>
-                {{animal.name}} - {{animal.type}} -
+                {{animal.name | titlecase}} - {{animal.type | titlecase}} -
                 <button (click)="showAge(animal)">Show Age</button>
+                <button (click)="removeAnimal(animal)">Remover</button>
             </li>
         } 
         @empty{
@@ -25,9 +26,4 @@
             <li>Lista Vazia</li>
         }
     </ul>
-    <hr style="border: 1px solid; margin: 20px;">
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda deleniti iste accusamus itaque sequi officiis perferendis, alias magnam placeat nemo nulla quam nesciunt reiciendis pariatur porro deserunt, id dignissimos minus!
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae exercitationem neque, officiis dolor minus facere non quisquam cum accusantium eius nostrum eveniet modi sequi, doloribus dignissimos vel dolore aperiam itaque!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat error repellendus soluta eos autem natus. Nihil rerum voluptatibus iste, sed, ex, possimus labore quas necessitatibus excepturi vero illum maiores beatae!
-    </p>
 </div>

@@ -1,3 +1,21 @@
 ul{
     list-style-type: none;
+    margin-left: 20px;
+}
+
+li{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    color: white;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin: 8px;
+    padding: 8px 16px;
+
+    &:hover{
+        background-color: rgb(93, 27, 155);
+    }
 }
