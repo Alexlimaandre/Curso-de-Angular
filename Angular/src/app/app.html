@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h1>Hello World!</h1>
     <p >Primeiro hello world no Angular</p>
     <a href="#">Veja mais</a>
@@ -7,12 +7,19 @@
 <app-first-component></app-first-component>
 <app-home></app-home>
 <app-parent-data [name]="userName" [idade]="idade" [userData]="userData" [endereco]="userEndereco"></app-parent-data>
-<!-- [nomeVar da Filho]="nomeVar do Pai" -->
- <app-directives></app-directives>
+ [nomeVar da Filho]="nomeVar do Pai" 
+<app-directives></app-directives>
 <app-if-condicional-cpt></app-if-condicional-cpt>
 <app-events></app-events>
 <app-emitter></app-emitter>
 <app-list-render></app-list-render>
 <app-pipes></app-pipes>
-<app-two-way-dt-binding></app-two-way-dt-binding>
-
+<app-two-way-dt-binding></app-two-way-dt-binding> -->
+<header class="container-header">
+  <nav class="nav-bar">
+    <a routerLink="/" class="link-bar">Home</a>
+    <a routerLink="/list" class="link-bar">List</a>
+    <a routerLink="/twdb" class="link-bar">Two Way Data Binding</a>
+  </nav>
+</header>
+<router-outlet></router-outlet>

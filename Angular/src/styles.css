@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+
 *{
     margin:0;
     padding:0;
@@ -32,4 +34,62 @@ div{
     border-radius: 15px;
     box-shadow: 0 0 5px black;
     padding-bottom: 10px;
+}
+
+/* Container ou direto no botão */
+.btn-superior-direito {
+  position: fixed; /* Fica parado mesmo ao rolar a página */
+  top: 20px;       /* Distância do topo */
+  right: 20px;     /* Distância da direita */
+  z-index: 1000;   /* Garante que fique sobre outros elementos */
+  
+  /* Estilização de cores e bordas */
+  background-color: #020a16; /* Azul PrimeNG */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito ao passar o mouse */
+.btn-superior-direito:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px); /* Sobe levemente */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Espaçamento entre o ícone e o texto caso use o <i> manual */
+.btn-superior-direito i {
+  font-weight: bold;
+}
+
+.container-header{
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 30px;
+}
+
+.link-bar{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, #b4b4b4, #b1b1c7);
+
+    &:hover{
+    color: #fff;  
+    background: linear-gradient(180deg, #7412b5, #6310df);
+    border-radius: 12px;
+
+    }
+
 }

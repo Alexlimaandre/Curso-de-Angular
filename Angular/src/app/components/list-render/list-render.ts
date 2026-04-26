@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Animal } from '../../Animal';
 import { ListService } from '../../services/list-service';
 import { TitleCasePipe } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list-render',
@@ -11,7 +13,7 @@ import { TitleCasePipe } from '@angular/common';
 })
 export class ListRender {
 
-  constructor(private listService: ListService) {}
+  constructor(private listService: ListService, private router: Router) {}
 
   removeAnimal(animal : Animal){
     console.log("Removendo Animal...");
