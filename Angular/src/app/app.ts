@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 import { FirstComponent } from './components/first-component/first-component';
 import { Home } from './components/home/home';
@@ -28,6 +29,7 @@ import { TwoWayDtBinding } from './components/two-way-dt-binding/two-way-dt-bind
     ListRender,
     Pipes,
     TwoWayDtBinding,
+    HttpClient,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

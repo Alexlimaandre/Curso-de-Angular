@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Animal } from '../../Animal';
 import { ListService } from '../../services/list-service';
 import { TitleCasePipe } from '@angular/common';
-import { Router } from '@angular/router';
+import { Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 
 @Component({
@@ -13,26 +15,23 @@ import { Router } from '@angular/router';
 })
 export class ListRender {
 
-  constructor(private listService: ListService, private router: Router) {}
+  private listService = inject(ListService);
+  private http = Inject(HttpClient)
 
-  removeAnimal(animal : Animal){
-    console.log("Removendo Animal...");
-    this.animals = this.listService.remove(this.animals, animal);
+  constructor(){
+    this.getAnimals();
   }
 
   animalDetails = ''
 
-  // Por padrão os dados vem de um banco, mas para a prática veremos esse dados mocado
-  animals: Animal[] = [
-    {id: 1, name: "bidu", type: "dog", age: 5},
-    {id: 2, name: "tom", type: "cat", age: 7},
-    {id: 3, name: "frida", type: "fish"},
-    {id: 4, name: "clóvis", type: "bird", age: 12},
-    // for(){}, no angular mais atual pode gerar algumu problema, se não tiver um item para ele usar no track
-    {id: 5,name: "clóvis", type: "bird"}
-  ]
+  // Por padrão os dados vem de um banco, mas para a prática veremos esse dados mocado(ANTES) - AULA 18 muda isso!!!
+  animals: Animal[] = [{id: 1, name: "bidu", type: "dog", age: 5}]
 
-  showAge(animal : Animal): void{
+  //(DEPOIS) - teoria, pois os dados nãao vem de um banco 'ainda'
+  //  animals: Animal[] = []
+
+  showAge(animal : Animal): void
+  {
     if (animal.age !== undefined){
       this.animalDetails = ` O pet tem :${animal.age} ano(s)`
     }
@@ -40,7 +39,18 @@ export class ListRender {
       this.animalDetails = 'O pet não possui idade registrada!'
     }
   }
+  
+  removeAnimal(animal : Animal)
+  {
+    console.log("Removendo Animal...");
+    this.animals = this.listService.remove(this.animals, animal);
+  }
 
+  getAnimals(): void {
+    this.listService.getAll();
+  }
+
+  // Dados mocados!
   names : any = [ {id: 1, name: "Alex", ismy: "Eu"},
     {id: 2, name: "Pedro", ismy: "Brother"},
     {id: 3, name: "Gabi", ismy: "Sister"},
