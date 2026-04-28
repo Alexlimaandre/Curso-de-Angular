@@ -29,8 +29,8 @@ import { TwoWayDtBinding } from './components/two-way-dt-binding/two-way-dt-bind
     ListRender,
     Pipes,
     TwoWayDtBinding,
-    HttpClient,
   ],
+  standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ListService {
 
-  private apiUrl
+  // private apiUrl
 
   remove(animals : Animal[], animal : Animal){
     return animals = animals.filter(param => animal.id !== param.id )
