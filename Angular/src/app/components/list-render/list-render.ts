@@ -24,11 +24,11 @@ export class ListRender {
 
   animalDetails = ''
 
-  // Por padrão os dados vem de um banco, mas para a prática veremos esse dados mocado(ANTES) - AULA 18 muda isso!!!
-  animals: Animal[] = [{id: 1, name: "bidu", type: "dog", age: 5}]
+  // // Por padrão os dados vem de um banco, mas para a prática veremos esse dados mocado(ANTES) - AULA 18 muda isso!!!
+  // animals: Animal[] = [{id: 1, name: "bidu", type: "dog", age: 5}]
 
-  //(DEPOIS) - teoria, pois os dados nãao vem de um banco 'ainda'
-  //  animals: Animal[] = []
+  // //(DEPOIS) - teoria, pois os dados nãao vem de um banco 'ainda'
+   animals: Animal[] = []
 
   showAge(animal : Animal): void
   {
