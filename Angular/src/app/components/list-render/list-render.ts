@@ -47,7 +47,7 @@ export class ListRender {
   }
 
   getAnimals(): void {
-    this.listService.getAll();
+    this.listService.getAll().subscribe((animals) => (this.animals = animals))
   }
 
   // Dados mocados!

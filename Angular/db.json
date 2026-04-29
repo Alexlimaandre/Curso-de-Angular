@@ -2,33 +2,33 @@
     "animais":[
         {
             "id": 1,
-            "nome": "Cachorro",
-            "raca": "Labrador",
-            "idade": 3
+            "name": "Cachorro",
+            "type": "Labrador",
+            "age": 3
         },
         {
             "id": 2,
-            "nome": "Gato",
-            "raca": "Siamês",
-            "idade": 2
+            "name": "Gato",
+            "type": "Siamês",
+            "age": 2
         },
         {
             "id": 3,
-            "nome": "Coelho",
-            "raca": "Anão Holandês",
-            "idade": 1
+            "name": "Coelho",
+            "type": "Anão Holandês",
+            "age": 1
         },
         {
             "id": 4,
-            "nome": "Pássaro",
-            "raca": "Canário",
-            "idade": 4
+            "name": "Pássaro",
+            "type": "Canário",
+            "age": 4
         },
         {
             "id": 5,
-            "nome": "Peixe",
-            "raca": "Betta",
-            "idade": 1
+            "name": "Peixe",
+            "type": "Betta",
+            "age": 1
         }
     ]
 }
