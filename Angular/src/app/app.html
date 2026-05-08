@@ -15,11 +15,30 @@
 <app-list-render></app-list-render>
 <app-pipes></app-pipes>
 <app-two-way-dt-binding></app-two-way-dt-binding> -->
-<header class="container-header">
-  <nav class="nav-bar">
-    <a routerLink="/" class="link-bar">Home</a>
-    <a routerLink="/list" class="link-bar">List</a>
-    <a routerLink="/twdb" class="link-bar">Two Way Data Binding</a>
-  </nav>
+
+<button class="menu-toggle" (click)="menuAberto = !menuAberto">
+  <i [class]="menuAberto ? 'pi pi-times' : 'pi pi-bars'"></i>
+</button>
+
+<header class="container-header" [class.menu-aberto]="menuAberto">
+  <section class="nav-container">
+    <h3>Navegação</h3>
+    
+    <nav class="nav-bar" (click)="menuAberto = false">
+      <a routerLink="/" class="link-bar"><i class="pi pi-home"></i> Home</a>
+      <a routerLink="/list" class="link-bar"><i class="pi pi-list"></i> List Render</a>
+      <a routerLink="/twdb" class="link-bar"><i class="pi pi-sync"></i> Two Way Data Binding</a>
+      <a routerLink="/change-number" class="link-bar"><i class="pi pi-plus-circle"></i> Change Number</a>
+      <a routerLink="/directives" class="link-bar"><i class="pi pi-code"></i> Directives</a>
+      <a routerLink="/emitter" class="link-bar"><i class="pi pi-send"></i> Emitter</a>
+      <a routerLink="/events" class="link-bar"><i class="pi pi-calendar"></i> Events</a>
+      <a routerLink="/home" class="link-bar"><i class="pi pi-map"></i> Home Secundária</a>
+      <a routerLink="/if-condicional" class="link-bar"><i class="pi pi-filter"></i> If Condicional</a>
+      <a routerLink="/item-details" class="link-bar"><i class="pi pi-info-circle"></i> Item Details</a>
+      <a routerLink="/parent-data" class="link-bar"><i class="pi pi-database"></i> Parent Data</a>
+      <a routerLink="/pipes" class="link-bar"><i class="pi pi-filter-slash"></i> Pipes</a>
+    </nav>
+  </section>
 </header>
+
 <router-outlet></router-outlet>

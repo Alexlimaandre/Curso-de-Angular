@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 import { FirstComponent } from './components/first-component/first-component';
 import { Home } from './components/home/home';
@@ -37,6 +36,7 @@ import { TwoWayDtBinding } from './components/two-way-dt-binding/two-way-dt-bind
 export class App {
   protected readonly title = signal('curso_angular');
 
+   menuAberto: boolean = false;
 
   userName: string = "André";
   userData = {
