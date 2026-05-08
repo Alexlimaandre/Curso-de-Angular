@@ -26,7 +26,7 @@ export class ItemDetails {
 
   getAnimal(){
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.listService.getItem(id).subscribe((animal) => (this.animal == animal));
+    this.listService.getItem(id).subscribe((animal) => (this.animal = animal));
   }
 
 
