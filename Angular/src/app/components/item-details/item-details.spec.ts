@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ItemDatails } from './item-datails';
+import { ItemDetails } from './item-details';
 
-describe('ItemDatails', () => {
-  let component: ItemDatails;
-  let fixture: ComponentFixture<ItemDatails>;
+describe('ItemDetails', () => {
+  let component: ItemDetails;
+  let fixture: ComponentFixture<ItemDetails>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ItemDatails],
+      imports: [ItemDetails],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ItemDatails);
+    fixture = TestBed.createComponent(ItemDetails);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

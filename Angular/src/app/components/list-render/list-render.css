@@ -19,3 +19,12 @@ button{
         background-color: rgb(93, 27, 155);
     }
 }
+
+a {
+    text-decoration: none;
+    color:cadetblue;
+    transition: 1s ease-in-out;
+    &:hover{
+        font-size: 1.5rem;
+    }
+}

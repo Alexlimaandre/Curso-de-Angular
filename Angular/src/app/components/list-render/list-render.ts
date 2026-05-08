@@ -4,12 +4,13 @@ import { ListService } from '../../services/list-service';
 import { TitleCasePipe } from '@angular/common';
 import { Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-list-render',
-  imports: [TitleCasePipe],
+  imports: [TitleCasePipe, RouterLink],
   templateUrl: './list-render.html',
   styleUrl: './list-render.css',
 })

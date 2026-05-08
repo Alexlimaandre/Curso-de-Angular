@@ -8,7 +8,7 @@ import { Emitter } from './components/emitter/emitter';
 import { Events } from './components/events/events';
 import { Home } from './components/home/home';
 import { IfCondicionalCpt } from './components/if-condicional-cpt/if-condicional-cpt';
-import { ItemDatails } from './components/item-datails/item-datails';
+import { ItemDetails } from './components/item-details/item-details';
 import { ParentData } from './components/parent-data/parent-data';
 import { Pipes } from './components/pipes/pipes';
 
@@ -22,7 +22,7 @@ export const routes: Routes = [
     { path: 'events', component: Events },
     { path: 'home', component: Home },
     { path: 'if-condicional', component: IfCondicionalCpt },
-    { path: 'item-details', component: ItemDatails }, // Corrigido o path, mantido o nome da pasta
+    { path: 'list/:id', component: ItemDetails }, // Corrigido o path, mantido o nome da pasta
     { path: 'parent-data', component: ParentData },
     { path: 'pipes', component: Pipes }
 ];

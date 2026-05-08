@@ -17,7 +17,12 @@ export class ListService {
   }
 
   getAll(): Observable<Animal[]> {
+    // Retorna a lista de animais que contém no 'banco'
     return this.httpcli.get<Animal[]>(this.apiUrl);
   }
 
+  getItem(id: Number): Observable<Animal> {
+    // Retorna o animal com o id específicado
+    return this.httpcli.get<Animal>(`${this.apiUrl}/${id}`);
+  }
 }

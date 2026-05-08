@@ -5,13 +5,13 @@
     <ul>
         @for (animal of animals; track animal.id){
             <li>
-                {{animal.name | titlecase}} - {{animal.type | titlecase}} -
+                <a routerLink="/list/{{animal.id}}"> {{animal.name | titlecase}} </a> - {{animal.type | titlecase}} -
                 <button (click)="showAge(animal)">Show Age</button>
                 <button (click)="removeAnimal(animal)">Remover</button>
             </li>
         } 
         @empty{
-            <li>Lista Vazia</li>
+            <li>Lista Vazia / ligue o server</li>
         }
         <h3>{{animalDetails}}</h3>
        
